@@ -4,7 +4,9 @@ const listaMusicas = document.getElementById("listaMusicas")
 
 async function buscarMusicas() {
     const resposta = await fetch(urlBackend)
+
     const musicas = await resposta.json()
+    console.log(musicas)
 
     musicas.forEach((musica) => {
         listaMusicas.innerHTML += `
